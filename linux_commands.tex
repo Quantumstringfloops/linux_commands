@@ -1,0 +1,136 @@
+\documentclass[12pt]{article}
+\usepackage[a4paper, margin=1in]{geometry}
+\usepackage{multicol}
+\usepackage{titlesec}
+\usepackage{enumitem}
+\usepackage{xcolor}
+\usepackage{tcolorbox}
+\usepackage{setspace}
+\setstretch{1.15}
+
+\titleformat{\section}{\large\bfseries\color{blue}}{}{0em}{}
+
+\title{\textbf{Linux Commands}}
+\author{}
+\date{}
+
+\begin{document}
+
+\maketitle
+
+\begin{multicols}{2}
+
+\section*{Navigation \& Directories}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{pwd} : Print current directory path
+  \item \texttt{cd /path} : Change directory
+  \item \texttt{cd ..} : Go up one level
+  \item \texttt{cd ~} : Go to home directory
+  \item \texttt{ls} : List files and directories
+  \item \texttt{ls -l} : Long list format
+  \item \texttt{ls -a} : Show hidden files
+  \item \texttt{mkdir dir} : Create directory
+  \item \texttt{mkdir -p a/b/c} : Nested directory creation
+  \item \texttt{rmdir dir} : Remove empty directory
+\end{itemize}
+
+\section*{File Management}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{touch file} : Create empty file
+  \item \texttt{cp src dest} : Copy file or directory
+  \item \texttt{mv old new} : Rename or move
+  \item \texttt{rm file} : Delete file
+  \item \texttt{rm -r dir} : Delete directory recursively
+  \item \texttt{rm -f file} : Force delete
+  \item \texttt{shred file} : Securely delete contents
+  \item \texttt{ln -s src link} : Create symbolic link
+  \item \texttt{zip archive file} : Compress file
+  \item \texttt{unzip archive.zip} : Extract zip
+\end{itemize}
+
+\section*{File Viewing and Editing}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{cat file} : Show file contents
+  \item \texttt{tac file} : Show in reverse
+  \item \texttt{less file} : Scrollable viewer
+  \item \texttt{head file} : First 10 lines
+  \item \texttt{tail file} : Last 10 lines
+  \item \texttt{nano file} : Edit file with nano
+  \item \texttt{echo "text"} : Print text to terminal or file
+  \item \texttt{cmp file1 file2} : Compare byte-by-byte
+  \item \texttt{diff file1 file2} : Line-by-line difference
+\end{itemize}
+
+\section*{Search and Filters}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{grep "term" file} : Search in file
+  \item \texttt{find . -name "*.sh"} : Find by pattern
+  \item \texttt{locate name} : Fast file finder
+  \item \texttt{wc -l file} : Line count
+  \item \texttt{sort file} : Sort lines
+  \item \texttt{uniq file} : Remove duplicates
+  \item \texttt{tr a-z A-Z} : Translate characters
+\end{itemize}
+
+\section*{Permissions}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{chmod +x file} : Make executable
+  \item \texttt{chmod 755 file} : Set specific permissions
+  \item \texttt{chown user file} : Change owner
+  \item \texttt{chown user:group file} : Change owner and group
+  \item \texttt{su} : Switch user
+\end{itemize}
+
+\section*{Networking}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{ping host} : Check connectivity
+  \item \texttt{ssh user@host} : Secure remote login
+  \item \texttt{scp file user@host:/path} : Secure copy to remote
+  \item \texttt{curl url} : Fetch URL data
+  \item \texttt{wget url} : Download from web
+  \item \texttt{traceroute host} : Show route to host
+  \item \texttt{netstat -tuln} : Show open ports
+  \item \texttt{ss -tuln} : Replacement for netstat
+  \item \texttt{iptables -L} : View firewall rules
+  \item \texttt{ufw enable} : Enable simple firewall
+\end{itemize}
+
+\section*{System Monitoring}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{top} : Real-time process view
+  \item \texttt{htop} : Interactive top (if installed)
+  \item \texttt{ps aux} : Show all processes
+  \item \texttt{kill PID} : Terminate process
+  \item \texttt{pkill name} : Kill by process name
+  \item \texttt{free -h} : RAM usage
+  \item \texttt{df -h} : Disk space usage
+  \item \texttt{uptime} : System running time
+\end{itemize}
+
+\section*{Package Management}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{apt update} : Update repo index
+  \item \texttt{apt upgrade} : Upgrade packages
+  \item \texttt{apt install pkg} : Install package
+  \item \texttt{dpkg -i file.deb} : Install DEB package
+  \item \texttt{yum install pkg} : Install package (RHEL)
+\end{itemize}
+
+\section*{Help and Documentation}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{man command} : Manual for command
+  \item \texttt{--help} : Show inline help
+\end{itemize}
+
+\section*{Services and System Control}
+\begin{itemize}[leftmargin=0.5cm]
+  \item \texttt{systemctl start service} : Start a service
+  \item \texttt{systemctl stop service} : Stop a service
+  \item \texttt{systemctl status service} : Service status
+  \item \texttt{systemctl enable service} : Enable on boot
+  \item \texttt{systemctl restart service} : Restart service
+\end{itemize}
+
+\end{multicols}
+
+\end{document}
